@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#a fix for the nginx webserver running on the ubuntu container which doesn't listen for conections on port 80
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
-pkill nginx
+# configures nginx to run and listen to port 80
+sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
+service nginx restart
+echo "" > /run/nginx.pid
