@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-# Replace nginx configuration file with default settings
-cat /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default
+# config ngnix server to listen to port 80
+
+sudo rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
