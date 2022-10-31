@@ -19,8 +19,8 @@ frontend http
 backend web-backend
     balance roundrobin
     option forwardfor
-    server 6185-web-01 18.232.49.74:80 check
-    server 6185-web-02 3.239.4.119:80 check
+    server 32459-web-01 100.25.169.98 check
+    server 32459-web-02 34.239.248.5 check
 " >> /etc/haproxy/haproxy.cfg
 
 printf %s "
